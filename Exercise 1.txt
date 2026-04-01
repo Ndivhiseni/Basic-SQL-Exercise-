@@ -1,0 +1,74 @@
+1. SELECT *
+   FROM employees_db;
+
+2.SELECT DISTINCT department
+  FROM employees_db;
+
+3. SELECT first_name,
+          last_name,
+          salary
+   FROM employees_db
+   ORDER BY salary DESC;
+
+4. SELECT first_name,
+          last_name,
+          salary
+   FROM employees_db
+   ORDER BY salary DESC
+   LIMIT 5;
+
+5. SELECT department
+   FROM employees_db
+   WHERE department = 'IT';
+
+6.SELECT department,
+         first_name,
+         last_name,
+         salary
+   FROM employees_db
+   WHERE department = 'finance' AND salary > 58000;
+
+7. SELECT department 
+   FROM employees_db
+   WHERE department = 'HR' OR
+         department = 'Marketing';
+8. SELECT department 
+   FROM employees_db
+   WHERE department NOT IN ('IT');
+
+9. SELECT department 
+   FROM employees_db
+   WHERE department IN ('IT', 'HR' OR 'Finance');
+
+10. SELECT department,
+           salary,
+           city 
+   FROM employees_db
+   WHERE department IN ('IT') AND 
+         salary > 50000 AND city = 'New York';
+
+11.SELECT first_name,
+           last_name,
+           department,
+           salary
+   FROM employees_db
+   WHERE department IN ('Finance','Marketing') AND 
+         salary > 52000
+   ORDER BY salary DESC;
+
+12.SELECT DISTINCT city
+   FROM employees
+   WHERE department NOT IN ('IT','HR');
+
+13.SELECT *
+   
+   FROM employees_db
+   WHERE department <> 'Finance' AND
+         salary > 50000
+   ORDER BY hire_date ASC;
+
+14. SELECT *
+    FROM employees_db
+    WHERE city IN ('Chicago','Los Angele') AND 
+          department IN ('IT','Marketing')          
+    LIMIT 3;
